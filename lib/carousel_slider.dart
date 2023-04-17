@@ -33,6 +33,7 @@ class _CarouselState extends State<Carousel> {
             InkWell(
               onTap: () {},
               child: CarouselSlider(
+                carouselController: carouselController,
                 items: carouselImages
                     .map(
                       (image) => Container(
@@ -48,7 +49,6 @@ class _CarouselState extends State<Carousel> {
                       ),
                     )
                     .toList(),
-                carouselController: carouselController,
                 options: CarouselOptions(
                   height: 600.0,
                   autoPlay: true,
